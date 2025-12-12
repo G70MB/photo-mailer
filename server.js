@@ -44,6 +44,8 @@ app.post('/sendphoto', async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running at http://localhost:${process.env.PORT}`);
+const PORT = process.env.PORT || 3000; // fallback for local testing
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
+
